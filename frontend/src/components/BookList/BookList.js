@@ -7,8 +7,8 @@ const BookList = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const handleDeleteBook = (id) => {
-    dispatch(deleteBook(id))
-  }
+    dispatch(deleteBook(id));
+  };
   return (
     <div className="app-block book-list">
       <h2>Book List</h2>
@@ -22,7 +22,9 @@ const BookList = () => {
                 {++i}. {book.title} by <strong>{book.author}</strong>
               </div>
               <div className="book-actions">
-                <button onClick={() => handleDeleteBook(book.id)}>Delete</button>
+                <button onClick={() => handleDeleteBook(book.id)}>
+                  Delete
+                </button>
               </div>
             </li>
           ))}
