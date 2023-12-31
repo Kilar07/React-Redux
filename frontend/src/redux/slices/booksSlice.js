@@ -12,8 +12,8 @@ export const fetchBook = createAsyncThunk(
       const res = await axios.get(url);
       return res.data;
     } catch (error) {
-      thunkAPI.dispatch(setError(error.message))
-      throw error
+      thunkAPI.dispatch(setError(error.message));
+      throw error;
     }
   }
 );
